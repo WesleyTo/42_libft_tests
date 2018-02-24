@@ -13,8 +13,48 @@
 #include "main.h"
 #include "libft.h"
 
+static void files_exist(void)
+{
+	int found;
+	const char **files;
+
+	const char *p1_files[] = {"ft_memset.c","ft_bzero.c","ft_memcpy.c","ft_memccpy.c","ft_memmove.c",
+							"ft_memchr.c","ft_memcmp.c","ft_strlen.c","ft_strdup.c","ft_strcpy.c",
+							"ft_strncpy.c","ft_strcat.c","ft_strncat.c","ft_strlcat.c","ft_strchr.c",
+							"ft_strrchr.c","ft_strstr.c","ft_strnstr.c","ft_strcmp.c","ft_strncmp.c",
+							"ft_atoi.c","ft_isalpha.c","ft_isdigit.c","ft_isalnum.c","ft_isascii.c",
+							"ft_isprint.c","ft_toupper.c","ft_tolower.c"};
+	const char *p2_files[] = {"ft_memalloc.c","ft_memdel.c","ft_strnew.c","ft_strdel.c","ft_strclr.c",
+							"ft_striter.c","ft_striteri.c","ft_strmap.c","ft_strmapi.c","ft_strequ.c",
+							"ft_strnequ.c","ft_strsub.c","ft_strjoin.c","ft_strtrim.c","ft_strsplit.c",
+							"ft_itoa.c","ft_putchar.c","ft_putstr.c","ft_putendl.c","ft_putnbr.c",
+							"ft_putchar.c","ft_putstr.c","ft_putendl.c","ft_putnbr.c"};
+	const char *bonus_files[] = {"ft_lstnew.c","ft_lstdelone.c","ft_lstdel.c","ft_lstadd.c",
+							"ft_lstiter.c","ft_lstmap.c"};							
+	const char **files_tiers[] = {p1_files, p2_files, bonus_files};
+	int bounds[] = {28, 24, 6};
+	for (int tier = 0; tier < 3; tier++)
+	{
+		files = files_tiers[tier];
+		found = 0;
+		for (int i = 0; i < bounds[tier]; i++)
+		{
+			if (access(files[i], F_OK) == -1)
+				printf("\tMissing Part %d file: %s\n", tier + 1, files[i]);
+			else
+				found++;
+		}
+		if (found == bounds[tier])
+			printf(">>> All Part %d files found\n", tier + 1);
+		else
+			printf(">>> Missing %d of %d files\n", bounds[tier] - found, bounds[tier]);
+	}
+}
+
 int main(void)
 {
+
+	files_exist();
 
 	int successes = 0;
 	int total = 0;
@@ -142,6 +182,6 @@ int main(void)
 	char *results = "  >>> RESULTS <<<";
 	char *smhbar = "    -----------";
 	char *pass = "    Passed: ";
-	char *fail = "    Failed: ";
+	char *fail = total - successes < 100 ? "    Failed: " : "     Failed: ";
 	printf("%s\n%s\n%s\n%s%d\n%s%d\n%s\n%s\n", hbar, results, smhbar, pass, successes, fail, total - successes, smhbar, hbar);
 }
