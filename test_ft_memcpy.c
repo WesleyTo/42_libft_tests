@@ -30,7 +30,7 @@ static int test1()
 	ft_memcpy(dst_ft, src, cpysize);
 	if (memcmp(dst, dst_ft, size) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, src, dst, dst_ft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, src, dst, dst_ft, failure);
 		return (0);
 	}
 	free(src);
@@ -58,7 +58,7 @@ static int test2()
 	ft_memcpy(dst_ft, src, cpysize);
 	if (memcmp(dst, dst_ft, size) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, src, dst, dst_ft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, src, dst, dst_ft, failure);
 		return (0);
 	}
 	free(src);
@@ -86,7 +86,7 @@ static int test3()
 	ft_memcpy(dst_ft, src, cpysize);
 	if (memcmp(dst, dst_ft, cpysize) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, src, dst, dst_ft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, src, dst, dst_ft, failure);
 		return (0);
 	}
 	free(src);
@@ -114,7 +114,7 @@ static int test4()
 	ft_memcpy(dst_ft, src, cpysize);
 	if (memcmp(dst, dst_ft, cpysize) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, src, dst, dst_ft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, src, dst, dst_ft, failure);
 		return (0);
 	}
 	free(src);
@@ -124,11 +124,36 @@ static int test4()
 	return (1);
 }
 
-void memcpy_tests(void)
+static int test5()
+{
+	int test_num = 5;
+	char *failure = "failed for normal input - returned pointer is not the same as dst";
+	void *input;
+	void *result;
+	void *ft_result;
+	int size = 10;
+
+	input = memset(malloc(size), '0', size);
+	result = malloc(size);
+	ft_result = ft_memcpy(result, input, size);
+	if (ft_result != result)
+	{
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, input, result, ft_result, failure);
+		return (0);
+	}
+	free(input);
+	free(result);
+	printf("\tTest %02d: Success!\n", test_num);
+	return (1);
+}
+
+int num_memcpy_tests(void)
+{
+	return (5);
+}
+
+int memcpy_tests(void)
 {
 	printf("==============================\nTesting ft_memcpy\n==============================\n");
-	test1();
-	test2();
-	test3();
-	test4();
+	return (test1() + test2() + test3() + test4() + test5());
 }

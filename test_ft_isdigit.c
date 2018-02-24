@@ -27,7 +27,7 @@ static int test1()
 		success = ft_result == result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%d | Expected:\t%c | Got:\t%c\n | %s\n", test_num, i, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %d | Expected: %c | Got: %c\n | %s\n", test_num, i, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -50,7 +50,7 @@ static int test2()
 		success = ft_result == result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%d | Expected:\t%c | Got:\t%c\n | %s\n", test_num, i, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %d | Expected: %c | Got: %c\n | %s\n", test_num, i, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -73,7 +73,7 @@ static int test3()
 		success = ft_result == result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%d | Expected:\t%c | Got:\t%c\n | %s\n", test_num, i, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %d | Expected: %c | Got: %c\n | %s\n", test_num, i, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -81,10 +81,13 @@ static int test3()
 	return (1);
 }
 
-void isdigit_tests(void)
+int num_isdigit_tests(void)
+{
+	return (3);
+}
+
+int  isdigit_tests(void)
 {
 	printf("==============================\nTesting ft_isdigit\n==============================\n");
-	test1();
-	test2();
-	test3();
+	return (test1() + test2() + test3());
 }

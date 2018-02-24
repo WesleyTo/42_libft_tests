@@ -27,7 +27,7 @@ static int test1()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -38,7 +38,7 @@ static int test1()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -49,7 +49,7 @@ static int test1()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -60,7 +60,7 @@ static int test1()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -83,7 +83,7 @@ static int test2()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -92,16 +92,20 @@ static int test2()
 	success = result == ft_result;
 	if (!success)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, 127, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, 127, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
 	return (1);
 }
 
-void isprint_tests(void)
+int num_isprint_tests(void)
+{
+	return (2);
+}
+
+int  isprint_tests(void)
 {
 	printf("==============================\nTesting ft_isprint\n==============================\n");
-	test1();
-	test2();
+	return (test1() + test2());
 }

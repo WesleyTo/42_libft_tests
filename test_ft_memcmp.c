@@ -24,7 +24,7 @@ static int test1()
 	aft = memset(malloc(size * 2), '0', size);
 	if (memcmp(a, aft, size) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, "(none)", a, aft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
 		return (0);
 	}
 	free(a);
@@ -46,7 +46,7 @@ static int test2()
 	aft = memset(malloc(size * 2), '0', size);
 	if (memcmp(a, aft, size) != 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, "(none)", a, aft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
 		return (0);
 	}
 	free(a);
@@ -68,7 +68,7 @@ static int test3()
 	aft = memset(malloc(size * 2), '0', size);
 	if (memcmp(a, aft, size * 2) == 0)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%s | Got:\t%s\n | %s\n", test_num, "(none)", a, aft, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
 		return (0);
 	}
 	free(a);
@@ -77,10 +77,13 @@ static int test3()
 	return (1);
 }
 
-void memcmp_tests(void)
+int num_memcmp_tests(void)
+{
+	return (3);
+}
+
+int  memcmp_tests(void)
 {
 	printf("==============================\nTesting ft_memcmp\n==============================\n");
-	test1();
-	test2();
-	test3();
+	return (test1() + test2() + test3());
 }

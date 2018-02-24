@@ -24,7 +24,7 @@ static int test1()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -43,7 +43,7 @@ static int test2()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -62,7 +62,7 @@ static int test3()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -81,7 +81,7 @@ static int test4()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -100,7 +100,7 @@ static int test5()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -119,7 +119,7 @@ static int test6()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -138,7 +138,7 @@ static int test7()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -157,7 +157,7 @@ static int test8()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -176,7 +176,7 @@ static int test9()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -195,7 +195,7 @@ static int test10()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -214,7 +214,7 @@ static int test11()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -233,7 +233,7 @@ static int test12()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -252,7 +252,7 @@ static int test13()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -271,7 +271,7 @@ static int test14()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -290,7 +290,7 @@ static int test15()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -309,7 +309,7 @@ static int test16()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -328,7 +328,7 @@ static int test17()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -347,7 +347,7 @@ static int test18()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -366,7 +366,7 @@ static int test19()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
@@ -385,34 +385,21 @@ static int test20()
 	ft_result = ft_atoi(input);
 	if (ft_result != result)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%s | Expected:\t%d | Got:\t%d\n | %s\n", test_num, input, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %s | Expected: %d | Got: %d\n | %s\n", test_num, input, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
 	return (1);
 }
 
-void atoi_tests(void)
+int num_atoi_tests(void)
+{
+	return (20);
+}
+
+int atoi_tests(void)
 {
 	printf("==============================\nTesting ft_atoi\n==============================\n");
-	test1();
-	test2();
-	test3();
-	test4();
-	test5();
-	test6();
-	test7();
-	test8();
-	test9();
-	test10();
-	test11();
-	test12();
-	test13();
-	test14();
-	test15();
-	test16();
-	test17();
-	test18();
-	test19();
-	test20();
+	return (test1() + test2() + test3() + test4() + test5() + test6() + test7() + test8() + test9() + test10()
+		+ test11() + test12() + test13() + test14() + test15() + test16() + test17() + test18() + test19() +test20());
 }

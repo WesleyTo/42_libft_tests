@@ -27,7 +27,7 @@ static int test1()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -50,7 +50,7 @@ static int test2()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -73,7 +73,7 @@ static int test3()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -96,7 +96,7 @@ static int test4()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -107,7 +107,7 @@ static int test4()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -118,7 +118,7 @@ static int test4()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -129,7 +129,7 @@ static int test4()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -152,7 +152,7 @@ static int test5()
 		success = result == ft_result;
 		if (!success)
 		{
-			printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, c, result, ft_result, failure);
+			printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, c, result, ft_result, failure);
 			return (0);
 		}
 	}
@@ -161,19 +161,20 @@ static int test5()
 	success = result == ft_result;
 	if (!success)
 	{
-		printf("\tTest %d: FAILURE | Input:\t%c | Expected:\t%c | Got:\t%c\n | %s\n", test_num, 127, result, ft_result, failure);
+		printf("\tTest %02d: FAILURE | Input: %c | Expected: %c | Got: %c\n | %s\n", test_num, 127, result, ft_result, failure);
 		return (0);
 	}
 	printf("\tTest %02d: Success!\n", test_num);
 	return (1);
 }
 
-void toupper_tests(void)
+int num_toupper_tests(void)
+{
+	return (5);
+}
+
+int  toupper_tests(void)
 {
 	printf("==============================\nTesting ft_toupper\n==============================\n");
-	test1();
-	test2();
-	test3();
-	test4();
-	test5();
+	return (test1() + test2() + test3() + test4() + test5());
 }
