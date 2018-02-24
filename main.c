@@ -181,7 +181,7 @@ int main(void)
 	char *hbar = "==============================";
 	char *results = "  >>> RESULTS <<<";
 	char *smhbar = "    -----------";
-	char *pass = "    Passed: ";
-	char *fail = total - successes < 100 ? "    Failed: " : "     Failed: ";
+	char *pass = successes < 100 ? "     Passed: " : "    Passed: ";
+	char *fail = total - successes < 100 ? "     Failed: " : "    Failed: ";
 	printf("%s\n%s\n%s\n%s%d\n%s%d\n%s\n%s\n", hbar, results, smhbar, pass, successes, fail, total - successes, smhbar, hbar);
 }
