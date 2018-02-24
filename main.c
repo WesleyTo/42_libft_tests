@@ -138,5 +138,10 @@ int main(void)
 	//total += num_lstnew_tests();
 	//successes += lstnew_tests();
 
-	printf("==============================\n>>> RESULTS <<<\n  Passed: %d\n  Failed: %d\n==============================\n", successes, total - successes);
+	char *hbar = "==============================";
+	char *results = "  >>> RESULTS <<<";
+	char *smhbar = "    -----------";
+	char *pass = "    Passed: ";
+	char *fail = "    Failed: ";
+	printf("%s\n%s\n%s\n%s%d\n%s%d\n%s\n%s\n", hbar, results, smhbar, pass, successes, fail, total - successes, smhbar, hbar);
 }
