@@ -109,17 +109,18 @@ static int num_bonus_tests(void)
 	//total += num_lstnew_tests();
 	return (total);
 }
-
+/*
 static int num_extra_tests(void)
 {
-	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests() + num_quicksort_tests());
+	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests());// + num_quicksort_tests());
 }
+*/
 
 static int test_part1(void)
 {
 	int successes = 0;
 
-	successes += atoi_tests() + bzero_tests()+ isalnum_tests()+ isalpha_tests();
+	successes += atoi_tests() + bzero_tests() + isalnum_tests()+ isalpha_tests();
 	successes += isascii_tests() + isdigit_tests() + isprint_tests()+ memccpy_tests();
 	successes += memchr_tests() + memcmp_tests() + memcpy_tests() + memmove_tests();
 	successes += memset_tests() + strcat_tests() + strchr_tests() + strcmp_tests();
@@ -179,17 +180,19 @@ static int test_bonus(void)
 	return (successes);
 }
 
+/*
 static int test_extra(void)
 {
-	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests() + quicksort_tests());
+	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests());// + quicksort_tests());
 }
+*/
 
 int main(void)
 {
 
 	files_exist();
-	int successes = test_part1() + test_part2() + test_bonus() + test_extra();
-	int total = num_part1_tests() + num_part2_tests() + num_bonus_tests() + num_extra_tests();
+	int successes = test_part1() + test_part2() + test_bonus();// + test_extra();
+	int total = num_part1_tests() + num_part2_tests() + num_bonus_tests();// + num_extra_tests();
 
 	char *hbar = "==============================";
 	char *results = "  >>> RESULTS <<<";

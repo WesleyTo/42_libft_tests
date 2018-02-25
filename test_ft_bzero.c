@@ -20,8 +20,10 @@ static int test1()
 	void *aft;
 	int size = 10;
 
-	a = bzero(malloc(size), size);
-	aft = ft_bzero(malloc(size), size);
+	a = malloc(size);
+	bzero(a, size);
+	aft = malloc(size);
+	ft_bzero(a, size);
 	if (memcmp(a, aft, size) != 0)
 	{
 		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
@@ -41,8 +43,10 @@ static int test2()
 	void *aft;
 	int size = 10;
 
-	a = bzero(memset(malloc(size), '0', size), size / 2);
-	aft = ft_bzero(memset(malloc(size), '0', size), size / 2);
+	a = malloc(size);
+	bzero(memset(a, '0', size), size / 2);
+	aft = malloc(size);
+	ft_bzero(memset(aft, '0', size), size / 2);
 	if (memcmp(a, aft, size) != 0)
 	{
 		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
@@ -62,8 +66,10 @@ static int test3()
 	void *aft;
 	int size = 10;
 
-	a = bzero(memset(malloc(size), '0', size), 0);
-	aft = ft_bzero(memset(malloc(size), '0', size), 0);
+	a = malloc(size);
+	bzero(memset(a, '0', size), 0);
+	aft = malloc(size);
+	ft_bzero(memset(aft, '0', size), 0);
 	if (memcmp(a, aft, size) != 0)
 	{
 		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
@@ -83,8 +89,10 @@ static int test4()
 	void *aft;
 	int size = 10;
 
-	a = bzero(memset(malloc(size), '0', size), 1);
-	aft = ft_bzero(memset(malloc(size), '0', size), 1);
+	a = malloc(size);
+	bzero(memset(a, '0', size), 1);
+	aft = malloc(size);
+	ft_bzero(memset(aft, '0', size), 1);
 	if (memcmp(a, aft, size) != 0)
 	{
 		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
