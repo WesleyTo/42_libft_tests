@@ -23,7 +23,7 @@ static int test1()
 	a = malloc(size);
 	bzero(a, size);
 	aft = malloc(size);
-	ft_bzero(a, size);
+	ft_bzero(aft, size);
 	if (memcmp(a, aft, size) != 0)
 	{
 		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, "(none)", a, aft, failure);
