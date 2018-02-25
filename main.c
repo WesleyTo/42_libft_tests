@@ -109,12 +109,6 @@ static int num_bonus_tests(void)
 	//total += num_lstnew_tests();
 	return (total);
 }
-/*
-static int num_extra_tests(void)
-{
-	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests());// + num_quicksort_tests());
-}
-*/
 
 static int test_part1(void)
 {
@@ -180,19 +174,12 @@ static int test_bonus(void)
 	return (successes);
 }
 
-/*
-static int test_extra(void)
-{
-	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests());// + quicksort_tests());
-}
-*/
-
 int main(void)
 {
 
 	files_exist();
-	int successes = test_part1() + test_part2() + test_bonus();// + test_extra();
-	int total = num_part1_tests() + num_part2_tests() + num_bonus_tests();// + num_extra_tests();
+	int successes = test_part1() + test_part2() + test_bonus();
+	int total = num_part1_tests() + num_part2_tests() + num_bonus_tests();
 
 	char *hbar = "==============================";
 	char *results = "  >>> RESULTS <<<";
