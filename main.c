@@ -113,9 +113,7 @@ static int num_bonus_tests(void)
 
 static int num_extra_tests(void)
 {
-	int total = 0;
-	total += num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests();
-	return (total);
+	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests() + num_quicksort_tests());
 }
 
 static int test_part1(void)
@@ -185,11 +183,7 @@ static int test_bonus(void)
 
 static int test_extra(void)
 {
-	int successes = 0;
-
-	successes += lstbuild_tests() + lstrev_tests() + lstinsert_tests();
-
-	return (successes);
+	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests() + quicksort_tests());
 }
 
 int main(void)

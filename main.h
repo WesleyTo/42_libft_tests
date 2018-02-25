@@ -82,6 +82,7 @@ int	lstmap_tests();
 int	lstbuild_tests();
 int	lstrev_tests();
 int	lstinsert_tests();
+int quicksort_tests();
 
 int	num_memset_tests();
 int	num_bzero_tests();
@@ -147,5 +148,6 @@ int	num_lstmap_tests();
 int	num_lstbuild_tests();
 int	num_lstrev_tests();
 int	num_lstinsert_tests();
+int num_quicksort_tests();
 
 #endif
