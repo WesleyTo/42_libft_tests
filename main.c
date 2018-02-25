@@ -59,8 +59,7 @@ static int num_part1_tests(void)
 	total += num_memchr_tests() + num_memcmp_tests() + num_memcpy_tests() + num_memmove_tests();
 	total += num_memset_tests() + num_strcat_tests() + num_strchr_tests() + num_strcmp_tests();
 	total += num_strcpy_tests() + num_strdup_tests() + num_strlcat_tests() + num_strlen_tests();
-	total += num_strncat_tests() + num_strncmp_tests();
-	//total += num_strncpy_tests();
+	total += num_strncat_tests() + num_strncmp_tests() + num_strncpy_tests();
 	//total += num_strnstr_tests();
 	//total += num_strrchr_tests();
 	//total += num_strstr_tests();
@@ -122,11 +121,10 @@ static int test_part1(void)
 
 	successes += atoi_tests() + bzero_tests()+ isalnum_tests()+ isalpha_tests();
 	successes += isascii_tests() + isdigit_tests() + isprint_tests()+ memccpy_tests();
-	successes += memchr_tests();	successes += memcmp_tests();	successes += memcpy_tests();	successes += memmove_tests();
-	successes += memset_tests();	successes += strcat_tests();	successes += strchr_tests();	successes += strcmp_tests();
-	successes += strcpy_tests();	successes += strdup_tests();	successes += strlcat_tests();	successes += strlen_tests();
-	successes += strncat_tests();	successes += strncmp_tests();
-	//successes += strncpy_tests();
+	successes += memchr_tests() + memcmp_tests() + memcpy_tests() + memmove_tests();
+	successes += memset_tests() + strcat_tests() + strchr_tests() + strcmp_tests();
+	successes += strcpy_tests() + strdup_tests() + strlcat_tests() + strlen_tests();
+	successes += strncat_tests() + strncmp_tests() + strncpy_tests();
 	//successes += strnstr_tests();
 	//successes += strrchr_tests();
 	//successes += strstr_tests();
