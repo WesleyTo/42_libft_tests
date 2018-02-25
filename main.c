@@ -51,132 +51,153 @@ static void files_exist(void)
 	}
 }
 
+static int num_part1_tests(void)
+{
+	int total = 0;
+	total += num_atoi_tests() + num_bzero_tests() + num_isalnum_tests() + num_isalpha_tests();
+	total += num_isascii_tests() + num_isdigit_tests() + num_isprint_tests() + num_memccpy_tests();
+	total += num_memchr_tests() + num_memcmp_tests() + num_memcpy_tests() + num_memmove_tests();
+	total += num_memset_tests() + num_strcat_tests() + num_strchr_tests() + num_strcmp_tests();
+	total += num_strcpy_tests() + num_strdup_tests() + num_strlcat_tests() + num_strlen_tests();
+	total += num_strncat_tests() + num_strncmp_tests();
+	//total += num_strncpy_tests();
+	//total += num_strnstr_tests();
+	//total += num_strrchr_tests();
+	//total += num_strstr_tests();
+	total += num_tolower_tests();
+	total += num_toupper_tests();
+	return (total);
+}
+
+static int num_part2_tests(void)
+{
+	int total = 0;
+	//total += num_itoa_tests();
+	//total += num_memalloc_tests();
+	//total += num_memdel_tests();
+	//total += num_putchar_tests();
+	//total += num_putchar_fd_tests();
+	//total += num_putendl_tests();
+	//total += num_putendl_fd_tests();
+	//total += num_putnbr_tests();
+	//total += num_putnbr_fd_tests();
+	//total += num_putstr_tests();
+	//total += num_putstr_fd_tests();
+	//total += num_strclr_tests();
+	//total += num_strdel_tests();
+	//total += num_strequ_tests();
+	//total += num_striter_tests();
+	//total += num_striteri_tests();
+	//total += num_strjoin_tests();
+	//total += num_strmap_tests();
+	//total += num_strmapi_tests();
+	//total += num_strnequ_tests();
+	//total += num_strnew_tests();
+	//total += num_strsplit_tests();
+	//total += num_strsub_tests();
+	//total += num_strtrim_tests();
+	return (total);
+}
+
+static int num_bonus_tests(void)
+{
+	int total = 0;
+	//total += num_lstadd_tests();
+	//total += num_lstdel_tests();
+	//total += num_lstdelone_tests();
+	//total += num_lstiter_tests();
+	//total += num_lstmap_tests();
+	//total += num_lstnew_tests();
+	return (total);
+}
+
+static int num_extra_tests(void)
+{
+	int total = 0;
+	total += num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests();
+	return (total);
+}
+
+static int test_part1(void)
+{
+	int successes = 0;
+
+	successes += atoi_tests() + bzero_tests()+ isalnum_tests()+ isalpha_tests();
+	successes += isascii_tests() + isdigit_tests() + isprint_tests()+ memccpy_tests();
+	successes += memchr_tests();	successes += memcmp_tests();	successes += memcpy_tests();	successes += memmove_tests();
+	successes += memset_tests();	successes += strcat_tests();	successes += strchr_tests();	successes += strcmp_tests();
+	successes += strcpy_tests();	successes += strdup_tests();	successes += strlcat_tests();	successes += strlen_tests();
+	successes += strncat_tests();	successes += strncmp_tests();
+	//successes += strncpy_tests();
+	//successes += strnstr_tests();
+	//successes += strrchr_tests();
+	//successes += strstr_tests();
+	successes += tolower_tests();
+	successes += toupper_tests();
+
+	return (successes);
+}
+
+static int test_part2(void)
+{
+	int successes = 0;
+	
+	//successes += itoa_tests();
+	//successes += memalloc_tests();
+	//successes += memdel_tests();
+	//successes += putchar_tests();
+	//successes += putchar_fd_tests();
+	//successes += putendl_tests();
+	//successes += putendl_fd_tests();
+	//successes += putnbr_tests();
+	//successes += putnbr_fd_tests();
+	//successes += putstr_tests();
+	//successes += putstr_fd_tests();
+	//successes += strclr_tests();
+	//successes += strdel_tests();
+	//successes += strequ_tests();
+	//successes += striter_tests();
+	//successes += striteri_tests();
+	//successes += strjoin_tests();
+	//successes += strmap_tests();
+	//successes += strmapi_tests();
+	//successes += strnequ_tests();
+	//successes += strnew_tests();
+	//successes += strsplit_tests();
+	//successes += strsub_tests();
+	//successes += strtrim_tests();
+
+	return (successes);
+}
+static int test_bonus(void)
+{
+	int successes = 0;
+
+	//successes += lstadd_tests();
+	//successes += lstdel_tests();
+	//successes += lstdelone_tests();
+	//successes += lstiter_tests();
+	//successes += lstmap_tests();
+	//successes += lstnew_tests();
+
+	return (successes);
+}
+
+static int test_extra(void)
+{
+	int successes = 0;
+
+	successes += lstbuild_tests() + lstrev_tests() + lstinsert_tests();
+
+	return (successes);
+}
+
 int main(void)
 {
 
 	files_exist();
-
-	int successes = 0;
-	int total = 0;
-
-	total += num_atoi_tests();
-	successes += atoi_tests();
-	total += num_bzero_tests();
-	successes += bzero_tests();
-	total += num_isalnum_tests();
-	successes += isalnum_tests();
-	total += num_isalpha_tests();
-	successes += isalpha_tests();
-	total += num_isascii_tests();
-	successes += isascii_tests();	
-	total += num_isdigit_tests();
-	successes += isdigit_tests();
-	total += num_isprint_tests();
-	successes += isprint_tests();
-	total += num_memccpy_tests();
-	successes += memccpy_tests();
-	total += num_memchr_tests();
-	successes += memchr_tests();
-	total += num_memcmp_tests();
-	successes += memcmp_tests();
-	total += num_memcpy_tests();
-	successes += memcpy_tests();
-	total += num_memmove_tests();
-	successes += memmove_tests();
-	total += num_memset_tests();
-	successes += memset_tests();
-	total += num_strcat_tests();
-	successes += strcat_tests();
-	total += num_strchr_tests();
-	successes += strchr_tests();
-	total += num_strcmp_tests();
-	successes += strcmp_tests();
-	total += num_strcpy_tests();
-	successes += strcpy_tests();
-	total += num_strdup_tests();
-	successes += strdup_tests();
-	total += num_strlcat_tests();
-	successes += strlcat_tests();
-	total += num_strlen_tests();
-	successes += strlen_tests();
-	total += num_strncat_tests();
-	successes += strncat_tests();
-	total += num_strncmp_tests();
-	successes += strncmp_tests();
-	//total += num_strncpy_tests();
-	//successes += strncpy_tests();
-	//total += num_strnstr_tests();
-	//successes += strnstr_tests();
-	//total += num_strrchr_tests();
-	//successes += strrchr_tests();
-	//total += num_strstr_tests();
-	//successes += strstr_tests();
-	total += num_tolower_tests();
-	successes += tolower_tests();
-	total += num_toupper_tests();
-	successes += toupper_tests();
-
-	//total += num_itoa_tests();
-	//successes += itoa_tests();
-	//total += num_memalloc_tests();
-	//successes += memalloc_tests();
-	//total += num_memdel_tests();
-	//successes += memdel_tests();
-	//total += num_putchar_tests();
-	//successes += putchar_tests();
-	//total += num_putchar_fd_tests();
-	//successes += putchar_fd_tests();
-	//total += num_putendl_tests();
-	//successes += putendl_tests();
-	//total += num_putendl_fd_tests();
-	//successes += putendl_fd_tests();
-	//total += num_putnbr_tests();
-	//successes += putnbr_tests();
-	//total += num_putnbr_fd_tests();
-	//successes += putnbr_fd_tests();
-	//total += num_putstr_tests();
-	//successes += putstr_tests();
-	//total += num_putstr_fd_tests();
-	//successes += putstr_fd_tests();
-	//total += num_strclr_tests();
-	//successes += strclr_tests();
-	//total += num_strdel_tests();
-	//successes += strdel_tests();
-	//total += num_strequ_tests();
-	//successes += strequ_tests();
-	//total += num_striter_tests();
-	//successes += striter_tests();
-	//total += num_striteri_tests();
-	//successes += striteri_tests();
-	//total += num_strjoin_tests();
-	//successes += strjoin_tests();
-	//total += num_strmap_tests();
-	//successes += strmap_tests();
-	//total += num_strmapi_tests();
-	//successes += strmapi_tests();
-	//total += num_strnequ_tests();
-	//successes += strnequ_tests();
-	//total += num_strnew_tests();
-	//successes += strnew_tests();
-	//total += num_strsplit_tests();
-	//successes += strsplit_tests();
-	//total += num_strsub_tests();
-	//successes += strsub_tests();
-	//total += num_strtrim_tests();
-	//successes += strtrim_tests();
-
-	//total += num_lstadd_tests();
-	//successes += lstadd_tests();
-	//total += num_lstdel_tests();
-	//successes += lstdel_tests();
-	//total += num_lstdelone_tests();
-	//successes += lstdelone_tests();
-	//total += num_lstiter_tests();
-	//successes += lstiter_tests();
-	//total += num_lstmap_tests();
-	//successes += lstmap_tests();
-	//total += num_lstnew_tests();
-	//successes += lstnew_tests();
+	int successes = test_part1() + test_part2() + test_bonus() + test_extra();
+	int total = num_part1_tests() + num_part2_tests() + num_bonus_tests() + num_extra_tests();
 
 	char *hbar = "==============================";
 	char *results = "  >>> RESULTS <<<";
