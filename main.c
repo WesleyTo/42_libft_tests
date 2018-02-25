@@ -47,7 +47,7 @@ static void files_exist(void)
 		if (found == bounds[tier])
 			printf(">>> All Part %d files found\n", tier + 1);
 		else
-			printf(">>> Missing %d of %d files\n", bounds[tier] - found, bounds[tier]);
+			printf(">>> Missing %d of %d Part %d files\n", bounds[tier] - found, bounds[tier], tier + 1);
 	}
 }
 
