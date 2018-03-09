@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int	memset_tests();
 int	bzero_tests();
