@@ -44,5 +44,10 @@ echo
 echo ============================================================
 echo Cleaning directory...
 echo ============================================================
+echo "rm main"
 rm main
 make fclean
+echo "rm test_ft*.o"
+rm test_ft*.o
+echo "rm *.gch"
+rm *.gch
