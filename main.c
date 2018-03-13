@@ -59,19 +59,15 @@ static int num_part1_tests(void)
 	total += num_memchr_tests() + num_memcmp_tests() + num_memcpy_tests() + num_memmove_tests();
 	total += num_memset_tests() + num_strcat_tests() + num_strchr_tests() + num_strcmp_tests();
 	total += num_strcpy_tests() + num_strdup_tests() + num_strlcat_tests() + num_strlen_tests();
-	total += num_strncat_tests() + num_strncmp_tests() + num_strncpy_tests();
-	//total += num_strnstr_tests();
-	//total += num_strrchr_tests();
-	//total += num_strstr_tests();
-	total += num_tolower_tests();
-	total += num_toupper_tests();
+	total += num_strncat_tests() + num_strncmp_tests() + num_strncpy_tests() + num_strnstr_tests();
+	total += num_strrchr_tests() + num_strstr_tests() + num_tolower_tests() + num_toupper_tests();
 	return (total);
 }
 
 static int num_part2_tests(void)
 {
 	int total = 0;
-	//total += num_itoa_tests();
+	total += num_itoa_tests();
 	//total += num_memalloc_tests();
 	//total += num_memdel_tests();
 	//total += num_putchar_tests();
@@ -119,12 +115,8 @@ static int test_part1(void)
 	successes += memchr_tests() + memcmp_tests() + memcpy_tests() + memmove_tests();
 	successes += memset_tests() + strcat_tests() + strchr_tests() + strcmp_tests();
 	successes += strcpy_tests() + strdup_tests() + strlcat_tests() + strlen_tests();
-	successes += strncat_tests() + strncmp_tests() + strncpy_tests();
-	//successes += strnstr_tests();
-	//successes += strrchr_tests();
-	//successes += strstr_tests();
-	successes += tolower_tests();
-	successes += toupper_tests();
+	successes += strncat_tests() + strncmp_tests() + strncpy_tests() + strnstr_tests();
+	successes += strrchr_tests() + strstr_tests() + tolower_tests() + toupper_tests();
 
 	return (successes);
 }
@@ -133,7 +125,7 @@ static int test_part2(void)
 {
 	int successes = 0;
 	
-	//successes += itoa_tests();
+	successes += itoa_tests();
 	//successes += memalloc_tests();
 	//successes += memdel_tests();
 	//successes += putchar_tests();

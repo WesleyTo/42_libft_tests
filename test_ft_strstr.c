@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strnstr.c                                  :+:      :+:    :+:   */
+/*   test_ft_strstr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wto <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/24 22:10:46 by wto               #+#    #+#             */
-/*   Updated: 2018/02/24 22:10:55 by wto              ###   ########.fr       */
+/*   Created: 2018/03/12 16:55:11 by wto               #+#    #+#             */
+/*   Updated: 2018/03/12 16:55:13 by wto              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static int test1()
 	char *failure = "failed for normal input";
 	char *haystack = "123456789";
 	char *needle = "2345";
-	char *result = strnstr(haystack, needle, 9);
-	char *ft_result = ft_strnstr(haystack, needle, 9);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 
 	if (result != ft_result)
 	{
@@ -36,8 +36,8 @@ static int test2()
 	char *failure = "failed for normal input - needle at beginning";
 	char *haystack = "123456789";
 	char *needle = "1234";
-	char *result = strnstr(haystack, needle, 9);
-	char *ft_result = ft_strnstr(haystack, needle, 9);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -54,8 +54,8 @@ static int test3()
 	char *failure = "failed for normal input - needle at end";
 	char *haystack = "123456789";
 	char *needle = "9";
-	char *result = strnstr(haystack, needle, 9);
-	char *ft_result = ft_strnstr(haystack, needle, 9);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -72,8 +72,8 @@ static int test4()
 	char *failure = "failed for normal input - needle not in haystack";
 	char *haystack = "123456789";
 	char *needle = "ABCD";
-	char *result = strnstr(haystack, needle, 9);
-	char *ft_result = ft_strnstr(haystack, needle, 9);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -90,8 +90,8 @@ static int test5()
 	char *failure = "failed for normal input - empty needle";
 	char *haystack = "123456789";
 	char *needle = "";
-	char *result = strnstr(haystack, needle, 9);
-	char *ft_result = ft_strnstr(haystack, needle, 9);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -108,8 +108,8 @@ static int test6()
 	char *failure = "failed for normal input - empty needle and haystack";
 	char *haystack = "";
 	char *needle = "";
-	char *result = strnstr(haystack, needle, 0);
-	char *ft_result = ft_strnstr(haystack, needle, 0);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -126,8 +126,8 @@ static int test7()
 	char *failure = "failed for invalid input - needle longer than haystack";
 	char *haystack = "1234";
 	char *needle = "12345";
-	char *result = strnstr(haystack, needle, 4);
-	char *ft_result = ft_strnstr(haystack, needle, 4);
+	char *result = strstr(haystack, needle);
+	char *ft_result = ft_strstr(haystack, needle);
 	
 	if (result != ft_result)
 	{
@@ -138,49 +138,13 @@ static int test7()
 	return (1);
 }
 
-static int test8()
+int num_strstr_tests(void)
 {
-	int test_num = 8;
-	char *failure = "failed for normal input - searched beyond the specified length";
-	char *haystack = "1234";
-	char *needle = "234";
-	char *result = strnstr(haystack, needle, 1);
-	char *ft_result = ft_strnstr(haystack, needle, 1);
-	
-	if (result != ft_result)
-	{
-		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, haystack, result, ft_result, failure);
-		return (0);
-	}
-	printf("\tTest %02d: Success!\n", test_num);
-	return (1);
+	return (7);
 }
 
-static int test9()
+int  strstr_tests(void)
 {
-	int test_num = 9;
-	char *failure = "failed for normal input - needle in haystack but longer than specified length";
-	char *haystack = "1234";
-	char *needle = "12";
-	char *result = strnstr(haystack, needle, 1);
-	char *ft_result = ft_strnstr(haystack, needle, 1);
-	
-	if (result != ft_result)
-	{
-		printf("\tTest %02d: FAILURE | Input: %s | Expected: %s | Got: %s\n | %s\n", test_num, haystack, result, ft_result, failure);
-		return (0);
-	}
-	printf("\tTest %02d: Success!\n", test_num);
-	return (1);
-}
-
-int num_strnstr_tests(void)
-{
-	return (9);
-}
-
-int  strnstr_tests(void)
-{
-	printf("==============================\nTesting ft_strnstr\n==============================\n");
-	return (test1() + test2() + test3() + test4() + test5() + test6() + test7() + test8() + test9());
+	printf("==============================\nTesting ft_strstr\n==============================\n");
+	return (test1() + test2() + test3() + test4() + test5() + test6() + test7());
 }
