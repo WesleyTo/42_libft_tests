@@ -19,19 +19,13 @@ echo ============================================================
 echo Making library...
 echo ============================================================
 make
-make all
-make clean
-make fclean
-make re
 
 echo
 echo ============================================================
 echo Compiling tests...
 echo ============================================================
-echo "gcc -Wall -Wextra -Werror -c main.h libft.h test_ft_*.c"
-gcc -Wall -Wextra -Werror -c main.h test_ft_*.c
-echo "gcc -Wall -Wextra -Werror -o main main.c libft.a test_ft_*.o"
-gcc -Wall -Wextra -Werror -o main main.c libft.a test_ft_*.o
+echo "gcc -Wall -Wextra -Werror -o main main.c test_ft_*.c libft.a"
+gcc -Wall -Wextra -Werror -o main main.c test_ft_*.c libft.a
 
 echo
 echo ============================================================
@@ -44,10 +38,5 @@ echo
 echo ============================================================
 echo Cleaning directory...
 echo ============================================================
-echo "rm main"
 rm main
 make fclean
-echo "rm test_ft*.o"
-rm test_ft*.o
-echo "rm *.gch"
-rm *.gch
