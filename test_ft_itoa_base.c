@@ -112,7 +112,7 @@ static int test6()
 	int test_num = 6;
 	int input = -1985234;
 	int base = 16;
-	char *result = "FFE1B52E";
+	char *result = "1E4AD2";
 	char *ft_result;
 	char *failure = "failed for regular negative number base 16";
 
@@ -188,7 +188,7 @@ static int test10()
 	int test_num = 10;
 	int input = -1985234;
 	int base = 2;
-	char *result = "11111111111000011011010100101110";
+	char *result = "111100100101011010010";
 	char *ft_result;
 	char *failure = "failed for regular negative number base 2";
 
