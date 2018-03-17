@@ -12,6 +12,7 @@
 echo ============================================================
 echo Norminette...
 echo ============================================================
+norminette src/ft_*.c includes/libft.h
 norminette ft_*.c libft.h
 
 echo
