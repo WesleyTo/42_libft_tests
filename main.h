@@ -14,6 +14,7 @@
 # define	MAIN_H
 
 #include "libft.h"
+//#include "includes/libft.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
