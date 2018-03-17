@@ -12,8 +12,6 @@
 
 #include <ctype.h>
 #include <stdio.h>
-#include "libft.h"
-
 #include "main.h"
 
 static int test1()

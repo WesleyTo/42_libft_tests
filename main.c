@@ -11,26 +11,25 @@
 /* ************************************************************************** */
 
 #include "main.h"
-#include "libft.h"
 
 static void files_exist(void)
 {
 	int found;
 	const char **files;
 
-	const char *p1_files[] = {"ft_memset.c","ft_bzero.c","ft_memcpy.c","ft_memccpy.c","ft_memmove.c",
-							"ft_memchr.c","ft_memcmp.c","ft_strlen.c","ft_strdup.c","ft_strcpy.c",
-							"ft_strncpy.c","ft_strcat.c","ft_strncat.c","ft_strlcat.c","ft_strchr.c",
-							"ft_strrchr.c","ft_strstr.c","ft_strnstr.c","ft_strcmp.c","ft_strncmp.c",
-							"ft_atoi.c","ft_isalpha.c","ft_isdigit.c","ft_isalnum.c","ft_isascii.c",
-							"ft_isprint.c","ft_toupper.c","ft_tolower.c"};
-	const char *p2_files[] = {"ft_memalloc.c","ft_memdel.c","ft_strnew.c","ft_strdel.c","ft_strclr.c",
-							"ft_striter.c","ft_striteri.c","ft_strmap.c","ft_strmapi.c","ft_strequ.c",
-							"ft_strnequ.c","ft_strsub.c","ft_strjoin.c","ft_strtrim.c","ft_strsplit.c",
-							"ft_itoa.c","ft_putchar.c","ft_putstr.c","ft_putendl.c","ft_putnbr.c",
-							"ft_putchar.c","ft_putstr.c","ft_putendl.c","ft_putnbr.c"};
-	const char *bonus_files[] = {"ft_lstnew.c","ft_lstdelone.c","ft_lstdel.c","ft_lstadd.c",
-							"ft_lstiter.c","ft_lstmap.c"};							
+	const char *p1_files[] = {"src/ft_memset.c","src/ft_bzero.c","src/ft_memcpy.c","src/ft_memccpy.c","src/ft_memmove.c",
+							"src/ft_memchr.c","src/ft_memcmp.c","src/ft_strlen.c","src/ft_strdup.c","src/ft_strcpy.c",
+							"src/ft_strncpy.c","src/ft_strcat.c","src/ft_strncat.c","src/ft_strlcat.c","src/ft_strchr.c",
+							"src/ft_strrchr.c","src/ft_strstr.c","src/ft_strnstr.c","src/ft_strcmp.c","src/ft_strncmp.c",
+							"src/ft_atoi.c","src/ft_isalpha.c","src/ft_isdigit.c","src/ft_isalnum.c","src/ft_isascii.c",
+							"src/ft_isprint.c","src/ft_toupper.c","src/ft_tolower.c"};
+	const char *p2_files[] = {"src/ft_memalloc.c","src/ft_memdel.c","src/ft_strnew.c","src/ft_strdel.c","src/ft_strclr.c",
+							"src/ft_striter.c","src/ft_striteri.c","src/ft_strmap.c","src/ft_strmapi.c","src/ft_strequ.c",
+							"src/ft_strnequ.c","src/ft_strsub.c","src/ft_strjoin.c","src/ft_strtrim.c","src/ft_strsplit.c",
+							"src/ft_itoa.c","src/ft_putchar.c","src/ft_putstr.c","src/ft_putendl.c","src/ft_putnbr.c",
+							"src/ft_putchar.c","src/ft_putstr.c","src/ft_putendl.c","src/ft_putnbr.c"};
+	const char *bonus_files[] = {"src/ft_lstnew.c","src/ft_lstdelone.c","src/ft_lstdel.c","src/ft_lstadd.c",
+							"src/ft_lstiter.c","src/ft_lstmap.c"};							
 	const char **files_tiers[] = {p1_files, p2_files, bonus_files};
 	int bounds[] = {28, 24, 6};
 	for (int tier = 0; tier < 3; tier++)
@@ -112,7 +111,8 @@ static int num_bonus_tests(void)
 
 static int num_extra_tests(void)
 {
-	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests() + num_quicksort_tests());
+	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests() 
+		+ num_quicksort_tests() + num_itoa_base_tests());
 }
 
 static int test_part1(void)
@@ -181,7 +181,8 @@ static int test_bonus(void)
 
 static int test_extra(void)
 {
-	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests() + quicksort_tests());
+	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests() 
+		+ quicksort_tests() + itoa_base_tests());
 }
 
 int main(void)
