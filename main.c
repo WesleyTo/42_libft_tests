@@ -112,7 +112,8 @@ static int num_bonus_tests(void)
 static int num_extra_tests(void)
 {
 	return (num_lstbuild_tests() + num_lstrev_tests() + num_lstinsert_tests() 
-		+ num_quicksort_tests() + num_itoa_base_tests());
+		+ num_quicksort_tests() + num_itoa_base_tests() + num_strlower_tests()
+		+ num_strupper_tests());
 }
 
 static int test_part1(void)
@@ -182,7 +183,8 @@ static int test_bonus(void)
 static int test_extra(void)
 {
 	return (lstbuild_tests() + lstrev_tests() + lstinsert_tests() 
-		+ quicksort_tests() + itoa_base_tests());
+		+ quicksort_tests() + itoa_base_tests() + strupper_tests()
+		+ strlower_tests());
 }
 
 int main(void)

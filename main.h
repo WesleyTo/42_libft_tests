@@ -84,6 +84,8 @@ int	lstrev_tests();
 int	lstinsert_tests();
 int quicksort_tests();
 int itoa_base_tests();
+int	strupper_tests();
+int	strlower_tests();
 
 int	num_memset_tests();
 int	num_bzero_tests();
@@ -149,7 +151,9 @@ int	num_lstmap_tests();
 int	num_lstbuild_tests();
 int	num_lstrev_tests();
 int	num_lstinsert_tests();
-int num_quicksort_tests();
-int num_itoa_base_tests();
+int	num_quicksort_tests();
+int	num_itoa_base_tests();
+int	num_strlower_tests();
+int	num_strupper_tests();
 
 #endif
